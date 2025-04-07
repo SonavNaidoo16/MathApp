@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                     throw NumberFormatException("Incorrect input")
                 }
 
-                // Determine the operation of the equation
+                // Operation of the equation
                 val result: Double
                 val operation: String
                 when {
@@ -76,7 +76,6 @@ class MainActivity : AppCompatActivity() {
                         if (num2 == 0.0) {
                             answerText.text = "Can't divide by zero!"
                             return@setOnClickListener
-                            //end of prompt
                         }
                         result = num1 / num2
                         operation = "Division"
