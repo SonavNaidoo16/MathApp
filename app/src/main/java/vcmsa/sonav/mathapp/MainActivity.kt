@@ -53,9 +53,6 @@ class MainActivity : AppCompatActivity() {
                 // Determine the operation of the equation
                 val result: Double
                 val operation: String
-                //AI assisted by chatGpt
-                /* prompt "create a code for kotlin which will allow you to connect the radio button to a given function.
-                 such as a radio button being clicked allows numbers to be added" "and allow it multiply, divide and subtract" */
                 when {
                     radioAdd.isChecked -> {
                         result = num1 + num2
@@ -72,10 +69,14 @@ class MainActivity : AppCompatActivity() {
                         operation = "Multiplication"
                         sign.text = "x"
                     }
+                    //AI assisted by chatGpt
+                    /* prompt "create a code for kotlin which will allow you to connect the radio button to a given function.
+                     such as a radio button being clicked allows numbers to be added" "and allow it multiply, divide and subtract" */
                     radioDivide.isChecked -> {
                         if (num2 == 0.0) {
                             answerText.text = "Can't divide by zero!"
                             return@setOnClickListener
+                            //end of prompt
                         }
                         result = num1 / num2
                         operation = "Division"
