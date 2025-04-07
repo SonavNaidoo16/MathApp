@@ -1,0 +1,32 @@
+# GitHub Actions CI workflow
+name: CI
+
+# Trigger the workflow on push or pull request events to the "master" branch
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  # Enable manual trigger from the GitHub Actions tab
+  workflow_dispatch:
+
+# Define the jobs to run
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Display a basic greeting message
+      - name: Say Hello
+        run: echo "Hello, world!"
+
+      # Step 3: Placeholder for real build/test/deploy steps
+      - name: Build and Test Placeholder
+        run: |
+          echo "Add real build steps here"
+          echo "For example: Compile code, run unit tests, deploy, etc."
